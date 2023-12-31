@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellMed.com</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            margin: 20px;
+            background-color: #000; /* Set background color to black */
+            color: #fff; /* Set text color to white */
+            transition: background-color 0.5s;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #e50914;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        main {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            color: #777;
+        }
+
+        section {
+            margin-bottom: 30px;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #1c1c1c; /* Set section background color to dark gray */
+            border: 1px solid #e50914;
+        }
+
+        #motivation {
+            background-color: #e50914;
+        }
+
+        .motivation-block {
+            margin-bottom: 20px;
+        }
+
+        #chat-container {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+            border: 1px solid #333;
+            padding: 10px;
+            background-color: #1c1c1c;
+            color: #fff;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            background-color: #e50914;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WellMed.com</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <!-- Use a JavaScript function to toggle the visibility of the dashboard -->
+        <a href="javascript:void(0);" onclick="toggleDashboard()">Dashboard</a>
+        <a href="#leaderboard" target="_blank">Leaderboard</a>
+    </nav>
+    <main>
+        <!-- Add an ID to the dashboard section for easy targeting in JavaScript -->
+        <section id="dashboard" class="hidden">
+            <!-- Dashboard content goes here -->
+            <!-- Removed the content -->
+        </section>
+
+        <!-- Welcome to WellMed.com Section -->
+        <section id="home" style="background-color: #e50914; padding: 30px; text-align: center;">
+            <h2>Welcome to WellMed.com</h2>
+            <p>Explore personalized wellness plans, connect with specialists, and take control of your health journey.</p>
+        </section>
+
+        
+
+        <!-- Other sections remain unchanged -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Driven Web Page</title>
+    <style>
+        /* Add your styles here */
+        body {
+            margin: 20px; /* Add margin to the body for general spacing */
+        }
+
+        #aiOutput {
+            margin-bottom: 20px; /* Add margin below the AI output */
+        }
+
+        .motivation-block {
+            margin-bottom: 30px; /* Add margin below each motivation block */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to the AI-Driven Web Page</h1>
+
+    <p id="aiOutput">AI recommendations will appear here.</p>
+
+    <button onclick="getAICoaching()">Get AI Coaching</button>
+
+    <script>
+        function getAICoaching() {
+            // In a real scenario, you would make an API request to a backend server
+            // which handles the AI logic and returns the response.
+            // For simplicity, let's just display a static AI response here.
+
+            const aiResponse = "Remember to take breaks and stay hydrated for better productivity.";
+
+            // Display the AI response on the web page
+            document.getElementById("aiOutput").innerText = aiResponse;
+        }
+    </script>
+</body>
+</html>
+
+<!-- Individual Motivation Blocks -->
+<!-- Updated Motivation Section with Titles -->
+<section id="motivation" class="motivation-block">
+    <h2>Stay Active, Stay Healthy</h2>
+    <p>Your body deserves the best. Embrace an active lifestyle for a healthier you.</p>
+</section>
+
+<section id="motivation" class="motivation-block">
+    <h2>Make Every Step Count</h2>
+    <p>Your well-being is a journey, not a destination. Every step is a positive investment in yourself.</p>
+</section>
+
+<section id="motivation" class="motivation-block">
+    <h2>Discover the Joy of Movement</h2>
+    <p>Every step is a celebration of your body's capabilities. Find joy in staying active and moving.</p>
+</section>
+
+<section id="motivation" class="motivation-block">
+    <h2>Healthy Habits for a Vibrant Tomorrow</h2>
+    <p>Today's healthy habits lead to a vibrant tomorrow. Invest in your well-being for a brighter future.</p>
+</section>
+
+<style>
+    /* Existing styles remain unchanged */
+
+    .motivation-block {
+        margin-bottom: 20px;
+        /* Add the following animation properties */
+        animation: jump 0.5s ease infinite alternate;
+    }
+
+    /* Define the jump animation */
+    @keyframes jump {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+</style>
+
+
+<!-- User Information Section -->
+<section id="user-info" style="background-color: #1c1c1c; padding: 20px; border: 1px solid #e50914;">
+    <h2>User Information</h2>
+    <form id="user-info-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <button type="button" onclick="submitUserInfoForm()">Submit</button>
+    </form>
+</section>
+
+<!-- Changes in Health Over Weeks Section -->
+<section id="health-changes" style="background-color: #1c1c1c; padding: 20px; border: 1px solid #e50914;">
+    <h2>Changes in Health Over Weeks</h2>
+    <p>Describe any changes you've observed in your health over the past few weeks. This could include improvements, challenges, or any specific experiences related to your well-being.</p>
+    <textarea id="health-changes-description" rows="4" cols="50" placeholder="Enter your description here..."></textarea>
+    <button type="button" onclick="submitHealthChangesForm()">Submit</button>
+</section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            margin: 20px;
+            background-color: #1c1c1c; /* Dark background color */
+            color: #fff; /* Text color */
+        }
+
+        section {
+            margin-bottom: 30px;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #1c1c1c; /* Section background color */
+            border: 1px solid #e50914;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input {
+            padding: 8px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            background-color: #e50914;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #aiOutput {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        /* Your existing styles remain unchanged */
+
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .gallery-item {
+            width: 30%;
+            margin: 10px 0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            border-radius: 5px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Image Gallery Section -->
+    <section id="gallery">
+        <!-- Replace the placeholder URLs with URLs of your downloaded images -->
+        <div class="gallery-item">
+            <img src="<a href="https://ibb.co/CMGHcZV><img src=https://i.ibb.co/CMGHcZV/3-hospitalist-patient-story-jpg-992x558-q85-crop-smart-subsampling-2-upscale.jpg alt=3-hospitalist-patient-story-jpg-992x558-q85-crop-smart-subsampling-2-upscale border=0></a> 
+        </div>
+        <div class="gallery-item">
+            <img src="<a href="https://ibb.co/WPgh7Ys"><img src="https://i.ibb.co/WPgh7Ys/pexels-andrea-piacquadio-3769151.jpg" alt="pexels-andrea-piacquadio-3769151" border="0"></a>
+        </div>
+        <div class="gallery-item">
+            <img src="<a href="https://ibb.co/x6z4R35"><img src="https://i.ibb.co/x6z4R35/doct.webp" alt="doct" border="0"></a>
+        </div>
+        <!-- Add more gallery items as needed with different image URLs -->
+    </section>
+
+    <!-- Other Sections (Login, AI-Driven Coaching, Home, Dashboard, Leaderboard) -->
+    <!-- ... (Previous code remains unchanged) ... -->
+</body>
+</html>
+  
+    <!-- AI-Driven Coaching Section -->
+    <section id="ai-coaching">
+        <h2>AI-Driven Coaching</h2>
+
+        <form id="aiForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="diseaseIdentifiers">Disease Identifiers (Hints, separated by commas):</label>
+            <input type="text" id="diseaseIdentifiers" name="diseaseIdentifiers">
+
+            <button type="button" onclick="getAICoaching()">Get AI Coaching</button>
+        </form>
+
+        <p id="aiOutput">AI recommendations will appear here.</p>
+    </section>
+
+    <script>
+        function getAICoaching() {
+            // Fetch user input
+            const name = document.getElementById("name").value;
+            const age = document.getElementById("age").value;
+            const diseaseIdentifiers = document.getElementById("diseaseIdentifiers").value;
+
+            // In a real scenario, you would make an API request to a backend server
+            // which handles the AI logic and returns the response.
+            // For simplicity, let's just display a static AI response here.
+
+            const aiResponse = `Hello ${name} (${age} years old), here are your AI recommendations based on disease identifiers: ${diseaseIdentifiers}. Remember to take breaks and stay hydrated for better productivity.`;
+
+            // Display the AI response on the web page
+            document.getElementById("aiOutput").innerText = aiResponse;
+        }
+    </script>
+<!-- News Section with Wired Lines Background -->
+<section id="medical-news">
+    <h2>Medical News</h2>
+
+    <!-- News Article 1 -->
+    <article class="news-article">
+        <h3>Revolutionary AI Diagnostic Tool Unveiled</h3>
+        <p>
+            Researchers have developed a groundbreaking AI diagnostic tool that can detect various medical conditions with high accuracy. This tool is expected to revolutionize the way diseases are diagnosed and treated.
+        </p>
+        <a href="#" target="_blank">Read more</a>
+    </article>
+
+    <!-- News Article 2 -->
+    <article class="news-article">
+        <h3>Implantable Devices for Continuous Health Monitoring</h3>
+        <p>
+            A new generation of implantable devices has been introduced, enabling continuous health monitoring. These devices provide real-time data, allowing healthcare professionals to track patients' health remotely.
+        </p>
+        <a href="#" target="_blank">Read more</a>
+    </article>
+
+    <!-- News Article 3 -->
+    <article class="news-article">
+        <h3>Robot-Assisted Surgeries on the Rise</h3>
+        <p>
+            Robotic systems are increasingly being used in surgeries, allowing for more precision and less invasive procedures. Surgeons are leveraging these technologies to enhance patient outcomes and recovery times.
+        </p>
+        <a href="#" target="_blank">Read more</a>
+    </article>
+
+    <!-- Add more news articles as needed -->
+
+</section>
+
+
+<!-- Leaderboard Section -->
+<section id="leaderboard">
+    <h2>Leaderboard</h2>
+    <p>Top Users with the Most Wellness Points</p>
+    <ol>
+        <li>John Doe - 500 points</li>
+        <li>Jane Smith - 450 points</li>
+        <li>Michael Johnson - 400 points</li>
+        <li>Alice Brown - 350 points</li>
+        <li>David White - 300 points</li>
+        <li>Emily Davis - 250 points</li>
+        <li>Robert Miller - 200 points</li>
+        <li>Emma Wilson - 150 points</li>
+        <li>Christopher Lee - 100 points</li>
+        <li>Olivia Harris - 50 points</li>
+    </ol>
+</section>
+
+<!-- Disease Stats -->
+<section id="disease-stats">
+    <h2>Disease Statistics</h2>
+    <p>Stay informed about your health:</p>
+    <ul>
+        <li>Heart Attacks: 10,000 cases reported</li>
+        <li>Diabetes: 15,000 cases reported</li>
+        <!-- Add more disease stats as needed -->
+    </ul>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Disease Stats Section with Chart -->
+<section id="disease-stats">
+    <h2>Disease Statistics</h2>
+    <p>Stay informed about your health:</p>
+    <canvas id="diseaseChart" width="400" height="200"></canvas>
+</section>
+<script>
+    // Disease statistics data
+    const diseaseData = {
+        labels: ['Heart Attacks', 'Diabetes'],
+        datasets: [{
+            label: 'Number of Cases',
+            data: [10000, 15000],
+            backgroundColor: ['#e50914', 'orange'], // Change the color for Diabetes to orange
+        }]
+    };
+
+    // Get the canvas element and initialize the chart
+    const ctx = document.getElementById('diseaseChart').getContext('2d');
+    const diseaseChart = new Chart(ctx, {
+        type: 'bar',
+        data: diseaseData,
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+
+
+<!-- JavaScript code for form submissions -->
+<script>
+    function submitUserInfoForm() {
+        // Add your logic for handling user information form submission here
+        alert('User information submitted successfully!');
+    }
+
+    function submitHealthChangesForm() {
+        // Add your logic for handling health changes form submission here
+        alert('Health changes submitted successfully!');
+    }
+</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            margin: 20px;
+            background-color: #1c1c1c; /* Dark background color */
+            color: #fff; /* Text color */
+        }
+
+        section {
+            margin-bottom: 30px;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #1c1c1c; /* Section background color */
+            border: 1px solid #e50914;
+        }
+
+        h2 {
+            color: #fff; /* Header color */
+        }
+
+        p {
+            line-height: 1.5;
+            color: #fff; /* Text color */
+        }
+    </style>
+</head>
+<body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #1c1c1c; /* Dark background color */
+            color: #fff; /* Text color */
+        }
+
+        section {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: #000; /* Black background color */
+            border: 1px solid #333;
+        }
+
+        h2 {
+            color: #fff; /* Header color */
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #e50914; /* Hover color */
+        }
+    </style>
+</head>
+<body>
+    <!-- Social Engagement Section -->
+    <section id="social-engagement">
+        <h2>Social Engagement</h2>
+        <p>Connect with us on social media and share the love!</p>
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com/your-facebook-page" target="_blank">Facebook</a>
+            <a href="https://twitter.com/your-twitter-account" target="_blank">Twitter</a>
+            <a href="https://www.instagram.com/your-instagram-account" target="_blank">Instagram</a>
+            <!-- Add actual social media links -->
+        </div>
+    </section>
+
+ <section id="food-chart">
+        <h2>Food Chart</h2>
+        <p>Explore our nutritious food options to support your well-being.</p>
+
+        <div class="food-chart">
+            <div>
+                <h3>Breakfast</h3>
+                <p>Oatmeal with fruits</p>
+                <div class="food-details">
+                    <span>Calories: 300</span>
+                    <span>Fat: 5g</span>
+                </div>
+            </div>
+            <div>
+                <h3>Lunch</h3>
+                <p>Grilled chicken salad</p>
+                <div class="food-details">
+                    <span>Calories: 400</span>
+                    <span>Fat: 8g</span>
+                </div>
+            </div>
+            <div>
+                <h3>Dinner</h3>
+                <p>Salmon with quinoa</p>
+                <div class="food-details">
+                    <span>Calories: 350</span>
+                    <span>Fat: 6g</span>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <!-- Other Sections (Login, AI-Driven Coaching, Home, Dashboard, Leaderboard, Gallery, etc.) -->
+    <!-- ... (Previous code remains unchanged) ... -->
+
+</body>
+    <!-- Hack for Health Hackathon Section -->
+    <section id="hackathon">
+        <h2>Hack for Health Hackathon</h2>
+        <p>
+            Welcome to the Hack for Health Hackathon! Join us in a collaborative effort to develop innovative solutions
+            that promote health and well-being. Whether you're a programmer, designer, healthcare professional, or
+            enthusiast, this is your opportunity to make a positive impact.
+        </p>
+        <p>
+            <strong>Date:</strong> [01-January-2024]
+            <br>
+            <strong>Location:</strong> [Online ]
+            
+        <p>
+           Participating in a hackathon is an invigorating experience where creativity knows no bounds. It's a journey marked by collaborative energy, rapid prototyping, and the thrill of turning innovative ideas into reality. Each hackathon is a unique learning opportunity, offering insights into new technologies, design approaches, and problem-solving strategies. Beyond the code, hackathons provide a chance to network with industry professionals, mentors, and like-minded peers, fostering connections that extend beyond the event
+        
+        </p>
+        Regards
+        </p>
+        Arjun Lakhanpal
+        (Team Warrior's.)
+    </section>
+
+
+
+</body>
+
+         
+
