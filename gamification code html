@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamification Example</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #score {
+            font-size: 24px;
+            color: green;
+        }
+
+        #game-container {
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Gamification Example</h1>
+
+    <p>Score: <span id="score">0</span></p>
+
+    <div id="game-container">
+        <button class="button" onclick="increaseScore()">Click me to earn points!</button>
+        <button class="button" onclick="resetScore()">Reset Score</button>
+    </div>
+
+    <script>
+        // Initial score
+        let score = 0;
+
+        // Function to increase the score
+        function increaseScore() {
+            score += 10;
+            updateScore();
+        }
+
+        // Function to reset the score
+        function resetScore() {
+            score = 0;
+            updateScore();
+        }
+
+        // Function to update the displayed score
+        function updateScore() {
+            document.getElementById('score').textContent = score;
+        }
+    </script>
+
+</body>
+</html>
