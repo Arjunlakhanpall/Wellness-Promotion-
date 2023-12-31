@@ -29,7 +29,7 @@ The purpose of this project is to create awareness and provide resources for pro
 
 ### Installation Steps
 
-1. Clone the repository: `git clone https://github.com/yourusername/wellness-promotion.git`
+1. Clone the repository: `git clone https://github.com/Arjunlakhanpall/Wellness-Promotion-/tree/main`
 2. Navigate to the project directory: `cd wellness-promotion`
 3. Install dependencies: `pip install -r requirements.txt`
 4. Run the application: `python app.py`
