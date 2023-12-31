@@ -2,7 +2,7 @@
 Wellness promotion focuses on proactive measures for holistic well-being, emphasizing healthy choices, education, workplace initiatives, community engagement, and technology integration. It empowers individuals and communities to prioritize and enhance physical, mental, and social health.
 
 
-                                             #https://app.onecompiler.com/3zxrd99sn_3zxzwanf8/#
+                      #https://ide.geeksforgeeks.org/online-html-editor/e7d06d4a-ba15-4da6-8ad9-4fda8fb2cd3a#
 ACTUALLY I DON'T HAVE ANY REPOSITORY TO CODE SO I USE BEG YOU TO PLEASE JUST COMPILE MINE CODE IN VS OR ANY REPOSI. YOU GUYS USED TO SEEN MINE PROJECT I REALLY WANT TO WIN THIS HACKATHON..PLEASE...
 
 ## Overview
